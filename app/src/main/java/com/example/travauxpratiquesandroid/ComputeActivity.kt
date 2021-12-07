@@ -1,4 +1,7 @@
 package com.example.travauxpratiquesandroid
 
-class ComputeActivity {
+import androidx.appcompat.app.AppCompatActivity
+
+class ComputeActiviy : AppCompatActivity(){
+
 }
