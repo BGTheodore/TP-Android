@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_compute" type="id" />
+    <item name="nbreClic_txtView" type="id" />
+    <item name="field_1" type="id" />
+    <item name="field_2" type="id" />
+    <item name="resultat" type="id" />
+</resources>
