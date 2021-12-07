@@ -14,7 +14,9 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:inputType="number"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/field_2"
@@ -25,7 +27,9 @@
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/field_1" />
+        app:layout_constraintTop_toBottomOf="@id/field_1"
+        android:inputType="number"
+        android:importantForAutofill="no" />
 
     <TextView
         android:id="@+id/resultat"
@@ -35,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/field_2"
-        tools:text="Le résultat s'afficher ici" />
+        tools:text="Le résultat s'affichera ici" />
 
     <Button
         android:id="@+id/btn_calculer"
