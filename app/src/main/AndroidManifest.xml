@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravauxPratiquesAndroid">
         <activity
+            android:name=".MainActivity">
+
+        </activity>
+        <activity
             android:name=".ComputeActivity"
             android:exported="true">
             <intent-filter>
@@ -18,7 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<!--        <activity android:name=".ComputeActivity" />-->
     </application>
 
 </manifest>
