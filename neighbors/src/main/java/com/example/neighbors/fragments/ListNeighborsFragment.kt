@@ -42,4 +42,5 @@ class ListNeighborsFragment : Fragment(){
         val adapter = ListNeighborsAdapter(neighbors)
         recyclerView.adapter = adapter
     }
+
 }

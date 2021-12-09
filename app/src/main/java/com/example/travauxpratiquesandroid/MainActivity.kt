@@ -9,12 +9,14 @@ import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     private lateinit var clickButton: Button
+    private lateinit var computeButton: Button
     private var nbClick = 0
     private lateinit var nbreClick_txtView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        computeButton = findViewById(R.id.btn_compute)
         clickButton = findViewById(R.id.btn_click_me)
         nbreClick_txtView = findViewById(R.id.nbreClick_txtView)
         //nbreClick_txtView.visibility = INVISIBLE
@@ -29,6 +31,10 @@ class MainActivity : AppCompatActivity() {
             nbreClick_txtView.text = newText
             if (nbClick == 5)
                 clickButton.isEnabled = false
+        }
+        computeButton.setOnClickListener {
+            val intent = Intent(baseContext, ComputeActivity::class.java)
+            startActivity(intent)
         }
     }
 }
