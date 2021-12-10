@@ -43,7 +43,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/item_list_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/item_list_name"
-        app:srcCompat="@drawable/ic_baseline_delete_24"
-        tools:ignore="VectorDrawableCompat" />
+        app:srcCompat="@drawable/ic_baseline_delete_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

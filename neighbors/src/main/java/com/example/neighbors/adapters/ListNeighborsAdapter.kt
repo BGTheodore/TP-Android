@@ -14,10 +14,13 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 class ListNeighborsAdapter(
-    items: List<Neighbor>
+    items: List<Neighbor>,
+    listNeighborHandler : ListNeighborHandler
 ) : RecyclerView.Adapter<ListNeighborsAdapter.ViewHolder>() {
     private val mNeighbors: List<Neighbor> = items
-    lateinit var context: Context
+    private val listNeighborHandler: ListNeighborHandler = listNeighborHandler
+    lateinit var context:Context
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         context = parent.context
@@ -31,7 +34,17 @@ class ListNeighborsAdapter(
         // Display Neighbor Name
         holder.mNeighborName.text = neighbor.name
 
-        // Display Neighbour Avatar
+        holder.mNeighborName.setOnClickListener {
+            listNeighborHandler.onDisplayDetails(neighbor)
+        }
+
+        holder.mDeleteButton.setOnClickListener{
+            listNeighborHandler.onDeleteNeighbor(neighbor)
+        }
+
+
+
+// Display Neighbour Avatar
         Glide.with(context)
             .load(neighbor.avatarUrl)
             .apply(RequestOptions.circleCropTransform())
@@ -58,6 +71,7 @@ class ListNeighborsAdapter(
             mNeighborName = view.findViewById(R.id.item_list_name)
             mDeleteButton = view.findViewById(R.id.item_list_delete_button)
         }
+
     }
 
 
